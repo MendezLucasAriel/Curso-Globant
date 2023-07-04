@@ -13,13 +13,15 @@ import entidad.Pelicula;
  */
 public class PeliculaService {
     
-    public Pelicula crearPelicula(){
-    
-    
+    public Pelicula crearPelicula(String titulo, String genero, int anio, int duracion){
+    Pelicula pelicula = new Pelicula(titulo, genero, anio, duracion);
+    return pelicula;
     }
     
-    public void listarPeliculas() {
-        
+   
+    
+    public void listarPeliculas(Pelicula p) {
+        System.out.println(p.toString());
     }
     
     public boolean buscarTitulo(){
