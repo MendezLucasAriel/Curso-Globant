@@ -18,6 +18,7 @@ public class servicecliente {
     private Scanner impr = new Scanner(System.in).useDelimiter("\n");
     servicerutina svr = new servicerutina() ;
     public cliente crearCliente(List<rutina> rutinas){
+        int e=0;
     cliente r = new cliente();
         System.out.println("Ingrese el nombre de cliente ");
         r.setNombre(impr.nextLine());
@@ -30,9 +31,15 @@ public class servicecliente {
         System.out.println("Ingrese el objetivo");
         r.setObjetivo(impr.nextLine());
         svr.obtenerRutina(rutinas);
+        do{
         System.out.println("Ingrese la ID de la rutina que quiere");
-        r.setRUTINA(rutinas.get(Integer.parseInt(impr.nextLine())));
-        return r;
+      int a =  Integer.parseInt(impr.nextLine());
+      if (verifID(rutinas, a)){
+        r.setRUTINA(rutinas.get(a));
+        e=1;
+      }
+        }while(e==0);
+      return r;
     }
     public void obtenerCliente(List<cliente> rutinas){
         System.out.println("Clientes");
@@ -40,6 +47,21 @@ public class servicecliente {
         System.out.println(r.toString());
     }
     }
+    public boolean verifID(List<rutina> rutinas, int val){
+    int ids;
+        int salir = 0;
+        if (val >= rutinas.size())
+        {
+            System.out.println("Ingrese un nuevo valor");
+            return false;
+        }else
+        {
+        return true;
+        
+        }
+    }
+    
+    
     
     public void actualizarCliente(List<cliente> rutinas, List<rutina>rutinini){
         int ids = conseguirId(rutinas);

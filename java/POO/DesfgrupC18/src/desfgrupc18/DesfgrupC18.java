@@ -24,14 +24,14 @@ public class DesfgrupC18 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        List<cliente> clientes = new ArrayList<>();
+        List<cliente> clientes = new ArrayList<>();  
         List<rutina> rutinas = new ArrayList<>();
        servicerutina svr= new servicerutina();
        servicecliente svc= new servicecliente();
-       for (int i=0;i<2;i++){
+       for (int i=0;i<1;i++){
        rutinas.add(svr.crearRutina());
        }
-        for (int i=0;i<2;i++){
+        for (int i=0;i<1;i++){
             clientes.add(svc.crearCliente(rutinas));
         }
         svr.obtenerRutina(rutinas);

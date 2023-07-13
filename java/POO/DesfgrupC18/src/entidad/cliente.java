@@ -99,7 +99,7 @@ public class cliente {
 
     @Override
     public String toString() {
-        return "cliente: " + "id=" + id + ", nombre=" + nombre + ", edad=" + edad + ", altura=" + altura + ", peso=" + peso + ", objetivo=" + objetivo + ", IMC=" + IMC + ", RUTINA=" + RUTINA ;
+        return "cliente: " + "id=" + id + ", nombre=" + nombre + ", edad=" + edad + ", altura=" + altura + ", peso=" + peso + ", objetivo=" + objetivo + ", IMC=" + (peso/(altura*altura)) + ", RUTINA=" + RUTINA ;
     }
 
 
